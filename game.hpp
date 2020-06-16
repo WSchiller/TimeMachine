@@ -1,9 +1,4 @@
-/*HPP*************************************************************************
-** FILENAME: game.hpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: Contains member function prototypes and variables for game.cpp
-******************************************************************************/
+// Description: Contains member function prototypes and variables for game.cpp
 
 #ifndef GAME_HPP
 #define GAME_HPP
