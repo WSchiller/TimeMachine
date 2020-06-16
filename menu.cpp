@@ -1,8 +1,5 @@
 /*CPP****************************************************************************************************
-** FILENAME: menu.cpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: menu.cpp displays game description and rules.  It allows the user to interact
+Description: menu.cpp displays game description and rules.  It allows the user to interact
 with the game flow by presenting options and getting player choices.  The user choice
 is validated to be an acceptable answer selection.
 *********************************************************************************************************/
