@@ -1,8 +1,6 @@
-/*CPP****************************************************************************************************
-** FILENAME: game.cpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: This file is for game play.  It initializes the default settings for the game and play
+
+/*
+Description: This file is for game play.  It initializes the default settings for the game and play
 begins with a 12 hour time limit.  The player decides what time era they want to first
 travel to.  They are presented with a brief description of the era and asked a trivia
 question. If the player answers the trivia question successfully they collect a
@@ -11,7 +9,7 @@ with another question. Each trivia question asked incurrs a 1 hour time run off.
 player is unable to travel to another time period until answering a question correctly.
 To win the game, the player must travel to each of the 6 eras and collect all 6 relics
 before time runs out!
-*********************************************************************************************************/
+*/
 
 #include "game.hpp"
 #include "menu.hpp"
