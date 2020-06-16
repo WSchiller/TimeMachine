@@ -1,20 +1,11 @@
-/*CPP****************************************************************************************************
-** FILENAME: egypt.cpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: This file is for the Ancient Egypt era.  It includes a brief introduction to the era,
-				displays a random trivia question to the user, then grades the user's answer against
-				the answer key.
-*********************************************************************************************************/
+/*Description: This file is for the Ancient Egypt era.  It includes a brief introduction to the era,
+	       displays a random trivia question to the user, then grades the user's answer against
+	       the answer key.
+*/
 
 #include "egypt.hpp"
 
-/* ----------------------------------------------------------Egypt--------
-| Function: Egypt
-| Purpose: constructor sets the string name, description, and relic
-| Parameters: none
-| Returns: none
-*-----------------------------------------------------------------------*/
+// constructor sets the string name, description, and relic
 Egypt::Egypt()
 {
 	name = "Ancient Egypt";
@@ -26,12 +17,8 @@ Egypt::Egypt()
 	obtainedRelic = false;
 }
 
-/* ----------------------------------------------------displayEraInfo------
-| Function: displayEraInfo
-| Purpose: prints the era info - name and description
-| Parameters: none
-| Returns: none
-*------------------------------------------------------------------------*/
+
+// prints the era info - name and description
 void Egypt::displayEraInfo()
 {
 	cout << "Time Period: " << name << endl
@@ -39,12 +26,8 @@ void Egypt::displayEraInfo()
 		<< "Era Description: " << description << endl;
 }
 
-/* ---------------------------------------------------displayQuestion-----
-| Function: displayQuestion
-| Purpose: prints a randomly selected trivia question
-| Parameters: none
-| Returns: none
-*-----------------------------------------------------------------------*/
+
+// prints a randomly selected trivia question
 void Egypt::displayQuestion()
 {
 	questionNumber = rand() % 4 + 1;
@@ -90,13 +73,8 @@ void Egypt::displayQuestion()
 	}
 }
 
-/* -------------------------------------------------------------------checkAnswer--------
-| Function: checkAnswer
-| Purpose: grades the answer pertaining to the trivia question
-| Parameters:
-|            string answer -- string of the user answer for the given question number
-| Returns: a boolean true if answer is correct, and false if incorrect
-*---------------------------------------------------------------------------------------*/
+
+// Grades the answer pertaining to the trivia question
 bool Egypt::checkAnswer(string answer)
 {
 	string answerKey[]{ "b", "c", "c", "a", "b" };
@@ -120,15 +98,8 @@ bool Egypt::checkAnswer(string answer)
 	}
 }
 
-/* -------------------------------------------------------------------~Egypt--------
-| Function: ~Egypt
-| Purpose : frees the dynamically allocated memory
-| Parameters : none
-| Returns : none
-*---------------------------------------------------------------------------------------*/
-Egypt::~Egypt()
-{
 
-}
+// Frees the dynamically allocated memory
+Egypt::~Egypt(){}
 
 
