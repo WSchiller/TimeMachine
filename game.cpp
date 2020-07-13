@@ -1,4 +1,3 @@
-
 /*
 Description: This file is for game play.  It initializes the default settings for the game and play
 begins with a 12 hour time limit.  The player decides what time era they want to first
@@ -71,7 +70,6 @@ Game::Game()
 	setRelicsObtained();
 }
 
-
 void Game::setStartingSpace(int timePeriod)
 {
 	if (timePeriod == 1)
@@ -99,7 +97,6 @@ void Game::setStartingSpace(int timePeriod)
 		currentSpace = information;
 	}
 }
-
 
 void Game::displayMap()
 {
@@ -144,7 +141,6 @@ void Game::displayMap()
 	}
 	cout << "|=============================================================|" << endl << endl;
 }
-
 
 void Game::startGame()
 {
@@ -209,18 +205,15 @@ void Game::startGame()
 	resetRelics();
 }
 
-
 void Game::setTime()
 {
 	time = 12;
 }
 
-
 void Game::setRelicsObtained()
 {
 	relicsObtained = 0;
 }
-
 
 void Game::resetRelics()
 {
@@ -231,7 +224,6 @@ void Game::resetRelics()
 	revolution->setRelicObtained(false);
 	information->setRelicObtained(false);
 }
-
 
 Game::~Game()
 {
