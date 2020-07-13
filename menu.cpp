@@ -1,17 +1,6 @@
-/*CPP****************************************************************************************************
-Description: menu.cpp displays game description and rules.  It allows the user to interact
-with the game flow by presenting options and getting player choices.  The user choice
-is validated to be an acceptable answer selection.
-*********************************************************************************************************/
-
 #include "menu.hpp"
 
-/* ----------------------------------------------------displayIntro------
-| Function: displayIntro
-| Purpose: Prints the game introduction and objective.
-| Parameters: none
-| Returns: none
-*------------------------------------------------------------------------*/
+
 void Menu::displayIntro()
 {
 	cout << "The Time Machine History Trivia Game!" << endl << endl;
@@ -22,12 +11,6 @@ void Menu::displayIntro()
 		<< "If you fail, you will be lost in time forever!\n" << endl;
 }
 
-/* ----------------------------------------------------displayMenu------
-| Function: displayMenu
-| Purpose: Prints the menu options
-| Parameters: none
-| Returns: none
-*------------------------------------------------------------------------*/
 void Menu::displayMenu()
 {
 	cout << "1. Play Game" << endl;
@@ -36,13 +19,6 @@ void Menu::displayMenu()
 	cout << "4. Exit Game" << endl;
 }
 
-/* ----------------------------------------------------getMenuInput------
-| Function: getMenuInput
-| Purpose: Gets the menu selection from the user and validates it.
-|          User can play game, list game rules, or exit.
-| Parameters: none
-| Returns: integer selection choice from the three presented options.
-*------------------------------------------------------------------------*/
 int Menu::getMenuInput()
 {
 	int selection;
@@ -51,12 +27,6 @@ int Menu::getMenuInput()
 	return selection;
 }
 
-/* ----------------------------------------------------displayRules------
-| Function: displayRules
-| Purpose: Prints the game rules and game objective.
-| Parameters: none
-| Returns: none
-*------------------------------------------------------------------------*/
 void Menu::displayRules()
 {
 	cout << "The objective of this text based game is to travel back in time to specific time periods and\n"
@@ -78,12 +48,6 @@ void Menu::displayRules()
 		<< "before time expires, or be lost in time forever!" << endl << endl;
 }
 
-/* ------------------------------------------------displayReferences------
-| Function: displayReferences
-| Purpose: Prints the references used to create game trivia questions.
-| Parameters: none
-| Returns: none
-*------------------------------------------------------------------------*/
 void Menu::displayReferences()
 {
 	cout << "References used to research era information and create trivia questions:\n\n"
@@ -103,12 +67,6 @@ void Menu::displayReferences()
 		<< "URL: http://quiz.history.com/" << endl << endl;
 }
 
-/* ----------------------------------------------------displayTimePeriods------
-| Function: displayTimePeriods
-| Purpose: Prints the six eras the user can travel to.
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------------*/
 void Menu::displayTimePeriods()
 {
 	cout << "What space in time do you want to travel to?" << endl << endl
@@ -120,13 +78,6 @@ void Menu::displayTimePeriods()
 		<< "6) Age of Information" << endl << endl;
 }
 
-/* ----------------------------------------------------getTimePeriods----------------
-| Function: getTimePeriods
-| Purpose: Gets the era the user wants to travel to begin the game and validates
-|          the selection.
-| Parameters: none
-| Returns: integer selection from the six presented eras.
-*----------------------------------------------------------------------------------*/
 int Menu::getTimePeriod()
 {
 	int selection;
@@ -135,13 +86,6 @@ int Menu::getTimePeriod()
 	return selection;
 }
 
-/* ----------------------------------------------------displayAdjacentEras------
-| Function: displayAdjacentEras
-| Purpose: Prints the eras adjacent to the era(space) the player is currently
-is occupying.
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------------*/
 void Menu::displayAdjacentEras()
 {
 	for (unsigned int j = 0; j < adjacentEraVec.size(); j++)
@@ -150,14 +94,6 @@ void Menu::displayAdjacentEras()
 	}
 }
 
-/* ----------------------------------------------------getNextEra--------------
-| Function: getNextEra
-| Purpose: Gets the adjacent era the user wants to travel to from the current
-|          era(space) vector and validates the selection.
-| Parameters:
-|            adjacentEraVec -- vector that contains the eras adjacent to the
-|                              current space.
-| Returns: integer selection from presented eras available to travel to.
 *----------------------------------------------------------------------------*/
 int Menu::getNextEra(Space *currentSpace)
 {
@@ -168,24 +104,11 @@ int Menu::getNextEra(Space *currentSpace)
 	return selection;
 }
 
-/* ----------------------------------------------------promptAnswer-----------
-| Function: promptAnswer
-| Purpose: Ask the user to enter their answer for the trivia question.
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------------*/
 void Menu::promptAnswer()
 {
 	cout << "Enter your answer (a, b, c, or d): ";
 }
 
-/* ----------------------------------------------------getAnswer----------------
-| Function: getAnswer
-| Purpose: Gets the players answer for the trivia queston and validates that it
-was a viable answer choice.
-| Parameters: none
-| Returns: a string of the user answer. All answers will either be (a,b,c,d).
-*----------------------------------------------------------------------------------*/
 string Menu::getAnswer()
 {
 	string answer;
@@ -194,16 +117,6 @@ string Menu::getAnswer()
 	return answer;
 }
 
-/* ----------------------------------------------------inputValidation-----------------
-| Function: inputValidation
-| Purpose: Gets user input, and validates it to be within acceptable range
-| Parameters:
-|            &selection -- integer is passed by reference and initialized by user input;
-|                          then validated to be viable selection choice
-|            validateRange -- string that is used to find the appropriate validation
-|                             check for the selection
-| Returns: none
-*-------------------------------------------------------------------------------------*/
 void Menu::inputValidation(int &selection, string validateRange)
 {
 	string line;
@@ -255,14 +168,6 @@ void Menu::inputValidation(int &selection, string validateRange)
 	}
 }
 
-/* -----------------------------------------------------------------answerInputValidation-----------------
-| Function: answerInputValidation
-| Purpose: Gets user input answer for trivia questions, and validates it to be within acceptable range
-| Parameters:
-|            &answer -- integer is passed by reference and initialized by user input;
-|                       then validated to be viable selection choice
-| Returns: none
-*---------------------------------------------------------------------------------------------------------*/
 void Menu::answerInputValidation(string &answer)
 {
 	string line;
