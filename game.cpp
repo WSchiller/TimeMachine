@@ -14,18 +14,6 @@ before time runs out!
 #include "game.hpp"
 #include "menu.hpp"
 
-/*-------------------------------------------------------------------------------------Game--------
-| Function: Game
-| Purpose: A constructor. The new operator allocates and initializes the memory then
-|          returns the address to the Space pointer variables that represent each of
-|          the six eras.  The constructor then sets the top, right, left,
-|          and bottom pointers to the adjacent spaces of the  eras, essentially
-|          creating a map of spaces.  In this case a  3x2 grid of spaces.  The adjacent
-|          eras of each space are next added to vectors that will be used later to present
-|          available eras the player can travel to based on the current pace/era the player is in.
-| Parameters: none
-| Returns: none
-*-------------------------------------------------------------------------------------------------*/
 Game::Game()
 {
 	dinosaur = new Jurassic();
@@ -83,16 +71,7 @@ Game::Game()
 	setRelicsObtained();
 }
 
-/*--------------------------------------------------------------------timePeriod-------------
-| Function: timePeriod
-| Purpose: sets the era for the current space the player is in
-| Parameters:
-|            int timePeriod -- once the player selects the era they want to start the
-|                              game in, the integer value timePeriod from the menu selection
-|                               is passed to thePeriod function and sets the era for the
-|                               current space.
-| Returns: none
-*-------------------------------------------------------------------------------------------*/
+
 void Game::setStartingSpace(int timePeriod)
 {
 	if (timePeriod == 1)
@@ -121,14 +100,7 @@ void Game::setStartingSpace(int timePeriod)
 	}
 }
 
-/*--------------------------------------------------------------------displayMap---------------
-| Function: displayMap
-| Purpose: displays a 3x2 map of the 6 space eras.  The current space era the player is located
-|          in is represented by an (*).  The space eras adjacent to the current location our
-|          possible choices for next space to travel to.
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------------------------------*/
+
 void Game::displayMap()
 {
 	cout << setw(33) << "Game Map" << endl << "|=============================================================|" << endl;
@@ -173,13 +145,7 @@ void Game::displayMap()
 	cout << "|=============================================================|" << endl << endl;
 }
 
-/*--------------------------------------------------------------------startGame--------------------
-| Function: startGame
-| Purpose: Commences gameplay and contains game flow.  Game ends when time runs out (player loses)
-|          or they successfully collect all 6 relics; 1 from each era (player wins).
-| Parameters: none
-| Returns: none
-*-------------------------------------------------------------------------------------------------*/
+
 void Game::startGame()
 {
 	Menu menu;
@@ -243,37 +209,19 @@ void Game::startGame()
 	resetRelics();
 }
 
-/*---------------------------------------------------------------------setTime----------------------
-| Function: setTime
-| Purpose: resets the time to the initial starting value of 12 after game completes, so another
-|           game may be played if the user chooses to do so.
-| Parameters: none
-| Returns: none
-*--------------------------------------------------------------------------------------------------*/
+
 void Game::setTime()
 {
 	time = 12;
 }
 
-/*---------------------------------------------------------------------setRelicsObtained------------
-| Function: setRelicsObtained
-| Purpose: resets the relic to the initial starting value of 0 after game completes, so another
-|           game may be played if the user chooses to do so.
-| Parameters: none
-| Returns: none
-*--------------------------------------------------------------------------------------------------*/
+
 void Game::setRelicsObtained()
 {
 	relicsObtained = 0;
 }
 
-/*---------------------------------------------------------------------------resetRelics-------------
-| Function: resetRelics
-| Purpose: resets the relics obtained for each era to false after game completes,
-|          meaning the relic has not been obtained for that era.
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------------------------------------*/
+
 void Game::resetRelics()
 {
 	dinosaur->setRelicObtained(false);
@@ -284,12 +232,7 @@ void Game::resetRelics()
 	information->setRelicObtained(false);
 }
 
-/*--------------------------------------------------------------------------------~Game-------------
-| Function: ~Game()
-| Purpose: frees the dynamically allocated memory for each of the six Space pointer eras
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------------------------------------*/
+
 Game::~Game()
 {
 	delete dinosaur;
@@ -299,5 +242,3 @@ Game::~Game()
 	delete revolution;
 	delete information;
 }
-
-
