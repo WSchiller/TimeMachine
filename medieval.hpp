@@ -1,10 +1,3 @@
-/*HPP****************************************************************
-** FILENAME: medieval.hpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: Contains member function prototypes for medieval.cpp
-*********************************************************************/
-
 #ifndef MEDIEVAL_HPP	
 #define MEDIEVAL_HPP
 #include "space.hpp"
