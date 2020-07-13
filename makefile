@@ -1,8 +1,3 @@
-# makefile for Time Machine History Trivia Game
-# Original Author: Wesley Schiller
-# December 4, 2017
-# CS 162: Final Project
-
 output: egypt.o information.o jurassic.o medieval.o revolution.o roman.o space.o game.o menu.o main.o
 	g++ -std=c++0x egypt.o information.o jurassic.o medieval.o revolution.o roman.o space.o game.o menu.o main.o -o output # compiles and links the ten object files created below into one executable file named output.   
 
