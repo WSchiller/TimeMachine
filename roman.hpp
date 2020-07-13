@@ -1,10 +1,3 @@
-/*HPP**********************************************************
-** FILENAME: roman.hpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: Contains function prototypes for roman.cpp
-***************************************************************/
-
 #ifndef ROMAN_HPP	
 #define ROMAN_HPP
 #include "space.hpp"
