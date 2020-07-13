@@ -17,7 +17,6 @@ Egypt::Egypt()
 	obtainedRelic = false;
 }
 
-
 // prints the era info - name and description
 void Egypt::displayEraInfo()
 {
@@ -25,7 +24,6 @@ void Egypt::displayEraInfo()
 		<< "=======================================================================================================================" << endl
 		<< "Era Description: " << description << endl;
 }
-
 
 // prints a randomly selected trivia question
 void Egypt::displayQuestion()
@@ -73,7 +71,6 @@ void Egypt::displayQuestion()
 	}
 }
 
-
 // Grades the answer pertaining to the trivia question
 bool Egypt::checkAnswer(string answer)
 {
@@ -98,8 +95,4 @@ bool Egypt::checkAnswer(string answer)
 	}
 }
 
-
-// Frees the dynamically allocated memory
 Egypt::~Egypt(){}
-
-
