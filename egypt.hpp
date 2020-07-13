@@ -1,5 +1,3 @@
-// Contains member function prototypes for Egypt.cpp
-
 #ifndef EGYPT_HPP
 #define EGYPT_HPP
 #include "space.hpp"
@@ -15,6 +13,3 @@ public:
 };
 
 #endif
-
-
-
