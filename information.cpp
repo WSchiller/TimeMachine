@@ -17,7 +17,6 @@ void Information::displayEraInfo()
 		<< "Era Description: " << description << endl;
 }
 
-
 void Information::displayQuestion()
 {
 	int questionNumber = rand() % 4 + 1;
@@ -63,7 +62,6 @@ void Information::displayQuestion()
 	}
 }
 
-
 bool Information::checkAnswer(string answer)
 {
 	string answerKey[]{ "d", "a", "c", "a", "d" };
@@ -83,7 +81,6 @@ bool Information::checkAnswer(string answer)
 		return false;
 	}
 }
-
 
 Information::~Information()
 {
