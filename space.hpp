@@ -1,10 +1,3 @@
-/*HPP**************************************************************************************************
-** FILENAME: space.hpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: Is an abstract class. Contains member function prototypes and variables for space.cpp
-*******************************************************************************************************/
-
 #ifndef SPACE_HPP
 #define SPACE_HPP
 #include <iostream>
