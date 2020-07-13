@@ -1,20 +1,6 @@
-/*CPP****************************************************************************************************
-** FILENAME: roman.cpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: This file is for the Roman Empire era.  It includes a brief introduction to the era,
-				displays a random trivia question to the user, then grades the user's answer against
-				the answer key.
-*********************************************************************************************************/
-
 #include "roman.hpp"
 
-/* ----------------------------------------------------------Roman--------
-| Function: Roman
-| Purpose: constructor sets the string name, description, and relic
-| Parameters: none
-| Returns: none
-*-----------------------------------------------------------------------*/
+
 Roman::Roman()
 {
 	name = "Roman Empire";
@@ -24,12 +10,6 @@ Roman::Roman()
 	obtainedRelic = false;
 }
 
-/* ----------------------------------------------------displayEraInfo------
-| Function: displayEraInfo
-| Purpose: prints the era info - name and description
-| Parameters: none
-| Returns: none
-*------------------------------------------------------------------------*/
 void Roman::displayEraInfo()
 {
 	cout << "Time Period: " << name << endl
@@ -37,12 +17,6 @@ void Roman::displayEraInfo()
 		<< "Era Description: " << description << endl;
 }
 
-/* ---------------------------------------------------displayQuestion-----
-| Function: displayQuestion
-| Purpose: prints a randomly selected trivia question
-| Parameters: none
-| Returns: none
-*----------------------------------------------------------------------*/
 void Roman::displayQuestion()
 {
 	int questionNumber = rand() % 4 + 1;
@@ -88,13 +62,6 @@ void Roman::displayQuestion()
 	}
 }
 
-/* -------------------------------------------------------------------checkAnswer--------
-| Function: checkAnswer
-| Purpose: grades the answer pertaining to the trivia question
-| Parameters:
-|            string answer -- string of the user answer for the given question number
-| Returns: a boolean true if answer is correct, and false if incorrect
-*-------------------------------------------------------------------------------------*/
 bool Roman::checkAnswer(string answer)
 {
 	string answerKey[]{ "d", "b", "c", "a", "c" };
@@ -115,12 +82,6 @@ bool Roman::checkAnswer(string answer)
 	}
 }
 
-/* -------------------------------------------------------------------~Roman--------
-| Function: ~Roman
-| Purpose : frees the dynamically allocated memory
-| Parameters : none
-| Returns : none
-*---------------------------------------------------------------------------------------*/
 Roman::~Roman()
 {
 	
