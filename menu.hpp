@@ -1,10 +1,3 @@
-/*HPP****************************************************************************************
-** FILENAME: menu.hpp
-** Author: Wesley Schiller
-** Date: December 4, 2017
-** Description: Contains member function prototypes and a private vector member for menu.cpp 
-*********************************************************************************************/
-
 #ifndef MENU_HPP
 #define MENU_HPP
 #include "space.hpp"
